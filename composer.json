@@ -1,0 +1,37 @@
+{
+    "name": "balihoo/phockito-unit-php-di",
+    "type": "library",
+    "description": "A library easing the combination of Phockito, PHP-DI & PHP Unit",
+    "keywords": [ "phockito", "mock", "test", "unit", "PHP Unit", "di" ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Balihoo, Inc.",
+            "email": "github@balihoo.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mnapoli/PhpDocReader"
+        }
+    ],
+    "require": {
+        "mnapoli/phpdocreader": "dev-master",
+        "mnapoli/php-di": "3.*",
+        "balihoo/phockito-unit" : "1.*",
+        "php": ">=5.3.0"
+    },
+
+    "require-dev": {
+        "satooshi/php-coveralls": "dev-master"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "PhockitoUnit": "src/",
+            "UnitTests" : "tests/"
+        }
+    }
+}
