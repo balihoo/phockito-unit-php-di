@@ -4,7 +4,7 @@ namespace UnitTests\PhockitoUnit;
 
 use Phockito;
 
-use PhockitoUnit\PhockitoUnitTestCase;
+use PhockitoUnit\PhockitoUnitPHPDITestCase;
 
 class MockableFacet
 {
@@ -18,7 +18,7 @@ class MockableFacet
 }
 
 
-class PhockitoUnitTestCaseTest extends PhockitoUnitTestCase
+class PhockitoUnitPHPDITestCaseTest extends PhockitoUnitPHPDITestCase
 {
     /** @var  MockableFacet */
     private $mockPrivate;

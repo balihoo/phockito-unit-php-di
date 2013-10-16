@@ -12,6 +12,7 @@
     ],
     "minimum-stability": "stable",
     "require": {
+        "hafriedlander/phockito" : "dev-master",
         "mnapoli/phpdocreader": "1.*",
         "mnapoli/php-di": "3.*",
         "balihoo/phockito-unit" : "1.*",
