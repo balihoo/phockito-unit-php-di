@@ -1,5 +1,9 @@
 PhockitoUnit PHP-DI
 ===================
+[![Build Status](https://travis-ci.org/balihoo/phockito-unit-php-di.png?branch=master)](https://travis-ci.org/balihoo/phockito-unit-php-di)
+[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/balihoo/phockito-unit-php-di/badges/quality-score.png?s=51aec695b6ace7d45544743d7a7fc564020c04cc)](https://scrutinizer-ci.com/g/balihoo/phockito-unit-php-di/)
+[![Code Coverage](https://scrutinizer-ci.com/g/balihoo/phockito-unit-php-di/badges/coverage.png?s=7f9c0e9601492c12876be8d0b236ed6823bc5236)](https://scrutinizer-ci.com/g/balihoo/phockito-unit-php-di/)
+
 
 PhockitoUnit PHP-DI exists to marry [PHP Unit](https://github.com/sebastianbergmann/phpunit/) with the [Phockito](https://github.com/hafriedlander/phockito) mocking framework and the [PHP-DI](https://github.com/mnapoli/PHP-DI) dependency injection framework in an everlasting love praised by PHP developers everywhere.  It is a PHP-DI specific enhancement to the [PhockitoUnit](https://github.com/balihoo/phockito-unit) libary.  It's features are rather simple:
 * Automatically generate mocks that your tests require
