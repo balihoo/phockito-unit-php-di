@@ -1,7 +1,7 @@
 PhockitoUnit PHP-DI
 ===================
 
-PhockitoUnit PHP-DI exists to marry [PHP Unit](https://github.com/sebastianbergmann/phpunit/) with the [Phockito](https://github.com/hafriedlander/phockito) mocking framework and the [PHP-DI](https://github.com/mnapoli/PHP-DI) dependency injection framework in an everlasting love praised by PHP developers everywhere.  It is a PHP-DI specific ehnahncement to the [PhockitoUnit](https://github.com/balihoo/phockito-unit) libary.  It's features are rather simple:
+PhockitoUnit PHP-DI exists to marry [PHP Unit](https://github.com/sebastianbergmann/phpunit/) with the [Phockito](https://github.com/hafriedlander/phockito) mocking framework and the [PHP-DI](https://github.com/mnapoli/PHP-DI) dependency injection framework in an everlasting love praised by PHP developers everywhere.  It is a PHP-DI specific enhancement to the [PhockitoUnit](https://github.com/balihoo/phockito-unit) libary.  It's features are rather simple:
 * Automatically generate mocks that your tests require
 * Automatically generate spys that your tests require
 * Automatically turn on hamcrest matching
