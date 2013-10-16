@@ -11,14 +11,8 @@
         }
     ],
     "minimum-stability": "stable",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/mnapoli/PhpDocReader"
-        }
-    ],
     "require": {
-        "mnapoli/phpdocreader": "dev-master",
+        "mnapoli/phpdocreader": "1.*",
         "mnapoli/php-di": "3.*",
         "balihoo/phockito-unit" : "1.*",
         "php": ">=5.3.0"
