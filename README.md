@@ -13,6 +13,7 @@ PhockitoUnit PHP-DI exists to marry [PHP Unit](https://github.com/sebastianbergm
 * Automatically generate spys that your tests require
 * Automatically turn on hamcrest matching
 * Automatically register your mocks in the DI Container
+
 That's it!
 
 PhockitoUnit PHP-DI in Action
