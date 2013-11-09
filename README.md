@@ -18,7 +18,7 @@ That's it!
 
 PhockitoUnit PHP-DI in Action
 ============
-Here is a very classic PHP Unit test that uses Phockito to mock a dependency
+Here is a classic PHP Unit test that uses Phockito to mock a dependency
 ```
 class SomeTest extends PHPUnit_Framework_TestCase
 {
