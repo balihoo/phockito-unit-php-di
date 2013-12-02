@@ -19,14 +19,14 @@ That's it!
 PhockitoUnit PHP-DI in Action
 ============
 Here is a classic PHP Unit test that uses Phockito to mock a dependency
-```
+```php
 class SomeTest extends PHPUnit_Framework_TestCase
 {
   public function setUp(){
     Phockito::include_hamcrest();
   }
   
-  testSomeMethod(){
+  public function testSomeMethod(){
     /** @var SomeDependency $mockDependency **/
     $mockDependency = Phockito::mock('SomeDependency');
     Phockito::when($mockDependency->dependentMethod(anything()))->return("value");
@@ -36,7 +36,7 @@ class SomeTest extends PHPUnit_Framework_TestCase
     $this->assertEquals("value", $instance->methodThatUsesDependency());
   }
   
-  testSomeMethodWhenSomeDependencyThrows(){
+  public function testSomeMethodWhenSomeDependencyThrows(){
     /** @var SomeDependency $mockDependency **/
     $mockDependency = Phockito::mock('SomeDependency');
     Phockito::when($mockDependency->dependentMethod(anything()))->throw(new Exception("Some error"));
@@ -53,14 +53,14 @@ class SomeTest extends PHPUnit_Framework_TestCase
 ```
 Certainly you have encoutnered or written a unit tests that is at least similar to this structure.  PhockitoUnit simplifies this structure by eliminating some common boilerplate, here it is:
 
-```
+```php
 class SomeTest extends \PhockitoUnit\PhockitoUnitTestCase
 {
   
   /** @var SomeDependency **/
   protected $mockDependency;
   
-  testSomeMethod(){
+  public function testSomeMethod(){
     
     Phockito::when($this->mockDependency->dependentMethod(anything()))->return("value");
     
@@ -69,7 +69,7 @@ class SomeTest extends \PhockitoUnit\PhockitoUnitTestCase
     $this->assertEquals("value", $instance->methodThatUsesDependency());
   }
   
-  testSomeMethodWhenSomeDependencyThrows(){
+  public function testSomeMethodWhenSomeDependencyThrows(){
 
     Phockito::when($this->mockDependency->dependentMethod(anything()))->throw(new Exception("Some error"));
     
@@ -84,7 +84,7 @@ class SomeTest extends \PhockitoUnit\PhockitoUnitTestCase
 }
 ```
 It's not a monsterous change, but it helps quite a bit, eliminating the chance of class name typos, class rename refactorings, etc.  And in more advanced scenarios where you are mocking an domain object graph it can make it easier to write more tests.  More tests means more coverage of intent.  Here's an example that sets up a graph and uses a spy:
-```
+```php
 class FamilyTest extends \PhockitoUnit\PhockitoUnitTestCase
 {
   
@@ -105,7 +105,7 @@ class FamilyTest extends \PhockitoUnit\PhockitoUnitTestCase
     
   }
   
-  testGetEldestChildNickName(){
+  public function testGetEldestChildNickName(){
     
     Phockito::when($this->mockChild1->getNickName())->return("Oldie");
     
@@ -114,14 +114,14 @@ class FamilyTest extends \PhockitoUnit\PhockitoUnitTestCase
     $this->assertEquals("Oldie", $family->getElestChildNickName());
   }
   
-  testGetYoungestchildFullName(){
+  public function testGetYoungestchildFullName(){
     
     Phockito::when($this->spyChild2->getFirstName())->return("Youngy");
     Phockito::when($this->spyChild2->getLastName())->return("McYoung");
     
     $family = new Family(array($this->mockParent));
     
-    $this->assertEquals("Youngy McYoung", $parent->testGetYoungestchildFullName());
+    $this->assertEquals("Youngy McYoung", $family->testGetYoungestchildFullName());
   }
 }
 ```
